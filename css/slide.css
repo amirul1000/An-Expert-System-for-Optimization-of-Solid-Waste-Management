@@ -1,0 +1,57 @@
+#slider {
+    width: 958px; /* important to be same as image width */
+    height: 332px; /* important to be same as image height */
+    position: relative; /* important */
+	overflow: hidden; /* important */
+    float: left;
+    padding: 0px;
+    margin: 0px 0 40px 2px;
+    display: inline;
+    z-index: 2;
+}
+#sliderContent {
+    width: 958px; /* important to be same as image width or wider */
+    overflow: hidden;
+    height: 332px;
+}
+.sliderImage {
+    float: left;
+    position: relative;
+	display: none;
+}
+.sliderImage span {
+    position: absolute;
+    width: 450px;
+    padding: 15px;
+    height: 150px;
+    background-color: #fff;
+    display: none;
+}
+#slider h2 a, #slider h2 a:visited {
+    color: #3eade1;
+    font-size: 26px;
+}
+a.more2 {
+  background: #3eade1 !important;
+  padding: 10px 28px !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.clear {
+	clear: both;
+}
+#slider img {
+    padding: 0;
+    margin: 0;
+}
+.bottom {
+  position: relative;
+  right: 0;
+  top: 60px;
+}
+.bottom p {
+  padding: 7px 0 0;
+}

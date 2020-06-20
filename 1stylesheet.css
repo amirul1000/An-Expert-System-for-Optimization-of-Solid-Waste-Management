@@ -1,0 +1,464 @@
+/*
+Theme Name: MulopiMagazine
+Theme URI: http://www.simplewpthemes.com
+Version: 1.0
+Author: sin2384
+Author URI: http://www.simplewpthemes.com
+Description: Free Wordpress theme by <a href="http://www.simplewpthemes.com/">SimpleWPThemes.com</a>. Please read READ ME.TXT file to find out how to insert pictures in the slider and gallery!
+*/
+@import url("css/comments.css");
+@import url("css/reset.css");
+@import url("css/slide.css");
+@import url("css/gallery.css");
+@import url("css/superfish.css");
+@import url("css/featuredcats.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+/***************LINKS*************************/
+
+a:link, a:visited {
+  color: #3eade1;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+/***************END LINKS*************************/
+
+html body {
+  background: #e8e8e8 url(images/header.gif) repeat-x;
+  font-size: 13px;
+  font-family: Arial, Verdana, Tahoma, Times New Roman;
+  line-height: 1.5em;
+  color: #6f6e6e;
+}
+
+/***************LAYOUT*************************/
+
+#mainwrap {
+  margin: 0 auto;
+  width: 960px;
+}
+#header {
+  width: 960px;
+  height: 100px;
+  padding-top: 40px;
+  margin-bottom: 25px;
+}
+#blogtitle {
+  text-transform: uppercase;
+  text-align:center;
+  color: #6495ED;
+}
+.description {
+  font-size: 14px;
+  color: #c4c3c3;
+  margin-top: -5px;
+}
+.adv {
+  float: right;
+  margin: -5px 5px 0 0;
+}
+
+/* -------- START PAGE MENU -------- */
+
+#top {
+  clear: both;
+  width: 958px;
+  height: 62px;
+  margin-bottom: 25px;
+  background: url(images/top.gif) repeat-x;
+  border: 1px solid #cfcece;
+  border-top: 0;
+  position: relative;
+  z-index: 999999999999999999;
+}
+#top li {
+  float: left;
+  border-right: 1px solid #cfcece;
+  line-height: 59px;
+  margin-top: 3px;
+}
+#top li a {
+  float: left;
+  display: block;
+  padding: 0px 25px;
+  color: #6f6e6e;
+  font-size: 17px;
+}
+#top li.current_page_item a, #top li a:hover {
+  color: #3eade1;
+}
+#top li ul {
+  width: 180px;
+  background: #fff;
+  margin-top: 26px;
+  border: 1px solid #cfcece;
+  margin-left: -1px;
+}
+#top li li {
+  line-height: 30px;
+  border-bottom: 1px solid #cfcece;
+}
+#top ul ul ul {
+  margin: -4px 0 0 50px;
+}
+*+html #top ul ul ul {
+  margin-left: 51px;
+}
+#top li li a {
+  font-size: 12px !important;
+}
+#top ul li ul li:hover a {
+  color: #3eade1;
+}
+
+
+
+/* -------- END PAGE MENU -------- */
+
+#s {
+  width: 189px;
+  padding: 11px 5px 9px;
+  border: 1px solid #b0afae;
+  font-size: 11px;
+  color: #b0afae;
+  margin-bottom: 5px;
+}
+*+html #s {
+  margin-top: -1px;
+  padding-bottom: 8px;
+}
+#contentwrap {
+  float: left;
+  width: 607px;
+}
+#sidebar {
+  float: right;
+  width: 328px;
+}
+.custom_images img {
+  margin: 14px 0 -3px;
+  padding: 0;
+}
+#footer {
+  width: 960px;
+  clear: both;
+  padding: 20px 0;
+  overflow: hidden;
+  font-size: 11px;
+  color: #9a9999;
+  background: url(images/h2.png) repeat-x scroll top;
+}
+#footer a, #footer a:visited {
+  color: #3eade1;
+}
+#footer a:hover {
+  color: #b4b3b3;
+  text-decoration: underline;
+}
+/* -------- END WP LAYOUT -------- */
+
+/* -------- START WP STYLES -------- */
+
+#sidebar h3 {
+  padding: 0 0 10px 0;
+  font-size: 22px;
+  color: #ffffff;
+  background: url(images/h2.png) repeat-x scroll bottom;
+}
+.side-widget {
+  clear: both;
+  width: 248px;
+  margin-left: 14px;
+  padding: 20px 25px;
+  border: 1px solid #b4b3b3;
+  background: #cbcbcb;
+  position: relative;
+  z-index: 999999999;
+}
+.widget-bot {
+  background: url(images/widget-bg.png) no-repeat;
+  width: 328px;
+  height: 84px;
+  margin-bottom: 20px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 777777;
+}
+#sidebar ul.children {
+  margin: 6px 0 -6px 0;
+  width: 100%;
+  display: block;
+}
+*+html #sidebar ul.children {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+#sidebar ul li {
+  padding: 6px 0 6px 15px;
+  margin-left: 0;
+  border-bottom: 1px solid #b4b4b4;
+  background: url(images/arrow.png) no-repeat scroll 0 12px;
+}
+#sidebar li li {
+  border-bottom: 0;
+  border-top: 1px solid #b4b4b4;
+}
+.side-widget a, .side-widget a:visited {
+  color: #6f6e6e;
+}
+.side-widget a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.textwidget {
+  padding: 5px;
+}
+.side-widget div {
+  padding: 5px 0;
+}
+/***************POST STYLES*************************/
+h2.title {
+  margin-bottom: 20px;
+  line-height: 32px;
+  font-size:32px;
+  padding-bottom: 20px;
+  background: url(images/h2.png) repeat-x scroll bottom;
+  overflow: hidden;
+}
+h2.title a, h2.title a:visited {
+  color: #3eade1;
+}
+h2.title a:hover {
+
+}
+.meta {
+  background: url(images/meta.gif) repeat-x;
+  padding: 0 18px;
+  line-height: 63px;
+  text-align: right;
+  width: 579px;
+  margin-left: -15px;
+  color: #9a9999;
+}
+.author {
+  background: url(images/author.png) no-repeat scroll right center;
+  padding-right: 25px;
+  margin-right: 5px;
+}
+.date {
+  background: url(images/clock.png) no-repeat scroll right center;
+  padding-right: 25px;
+  margin-right: 5px;
+}
+.comm {
+  background: url(images/comm.png) no-repeat scroll right center;
+  padding-right: 25px;
+  margin-right: 5px;
+}
+.left {
+  float: left;
+}
+a.more-link {
+  background: #cbcbcb;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px 20px;
+  margin-right: 5px;
+}
+.postmetadata {
+  margin: 15px 0;
+}
+.in {
+  clear: both;
+  width: 605px;
+  float: right;
+  position: relative;
+  left: 10px;
+}
+.post, .page {
+  border: 1px solid #cfcece;
+  margin-bottom: 15px;
+  width: 575px;
+  padding: 15px 15px 0.4px;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+  z-index: 33333;
+  margin-left: 10px;
+}
+.post-bot {
+  width: 632px;
+  height: 82px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2222;
+  background: url(images/post-bot.png) no-repeat;
+}
+.entry {
+  margin: 10px 0 13px;
+  line-height: 21px;
+  border-bottom: 1px solid #b4b4b4;
+  overflow: hidden;
+  padding-bottom: 13px;
+}
+.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
+  margin-top: 15px;
+}
+.entry h2 {
+  margin-bottom: 0.4em;
+}
+.entry p {
+  margin-bottom: 10px;
+}
+.entry img, .post_thumbnail {
+  padding: 6px;
+  border: 1px solid #cfcece;
+  background: #fff;
+}
+.entry th {
+  padding: 0;
+  margin-right: 2px;
+}
+.entry li {
+  margin-left: 20px;
+  list-style: circle;
+}
+.entry ol li {
+  list-style: decimal;
+}
+blockquote {
+  border-left: 10px solid #666666;
+  margin-left: 20px;
+}
+blockquote p {
+  padding: 10px;
+}
+.alignleft {
+  float: left;
+  margin: 5px 10px 0px 0px;
+}
+.alignright {
+  float: right;
+  margin: 5px 0px 0px 10px;
+}
+img.aligncenter {
+  display: block;
+  margin: 0 auto 5px;
+}
+/***************END POST STYLES*************************/
+#calendar_wrap {
+  text-align: center;
+}
+caption {
+  background: #D2D2D2;
+  color: #fff;
+  width: 100%;
+}
+#wp-calendar th {
+  padding: 13px;
+}
+#wp-calendar td a:link, td#prev a, td#next a {
+  background: #D2D2D2;
+  padding: 1px 6px;
+  color: #fff;
+  line-height: 29px;
+}
+li.pagenav, li.categories, li.linkcat {
+  list-style:none;
+}
+h2.pagetitle {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 35px;
+}
+p.center {
+  margin: 10px 0;
+}
+/* -------- END WP STYLES -------- */
+
+
+
+/* -------- TABLES -------- */
+#contentwrap table{font-size:1.2em;margin:5px 0 25px 1px;}
+#contentwrap table td{padding:8px;border: 1px solid #ccc;}
+/* -------- END TABLES -------- */
+
+
+/* -------- PAGE NAVIGATION -------- */
+
+.wp-pagenavi{
+  clear:both;
+  margin:20px 0 20px 10px;
+  font-size: 11px;
+}
+.wp-pagenavi span.pages,.wp-pagenavi span.extend{
+  background:#fff;
+  border:1px solid #cfcece;
+  color:#6f6e6e;
+  margin:2px;
+  padding:4px 8px;
+}
+.wp-pagenavi a,.wp-pagenavi a:link,.wp-pagenavi a:visited{
+  background:#fff;
+  border:1px solid #cfcece;
+  color:#6f6e6e;
+  margin:2px;
+  padding:4px 8px;
+  text-decoration:none;}
+.wp-pagenavi span.current,.wp-pagenavi a:hover{
+  background:#fff;
+  border:1px solid #cfcece;
+  color:#3eade1;
+  margin:2px;
+  padding:4px 8px;
+}
+/* -------- END PAGE NAVIGATION -------- */
+
+/* -------- SUBSCRIPTION -------- */
+ul#botsoc {
+  float: right;
+  width: 208px;
+  margin-left: 12px;
+}
+ul#botsoc li {
+  float: left;
+  line-height: 0;
+  border-right: 0;
+  padding: 22px 0 0 16px;
+}
+ul#botsoc li a {
+  padding: 0;
+}
+/* -------- END SUBSCRIPTION -------- */
+/* -------- ADVERT -------- */
+
+.advert{
+  border: 1px solid #329bcc;
+  background: #3eade1;
+  overflow: hidden;
+}
+.advert h3 {
+  background: url(images/h3.png) repeat-x scroll bottom !important;
+}
+.advert img{
+  padding:0px;
+  border:none;
+  margin:0 0 0 -1px;
+  float: left;
+}
+
+#error {
+	color:red;
+	font-size:10px;
+	display:none;
+}
+.needsfilled {
+	background:red;
+	color:white;
+}
+
+/* -------- END ADVERT -------- */
